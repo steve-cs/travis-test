@@ -14,8 +14,8 @@ script:
   echo Hello World;
   export PATH=/usr/local/gnat/bin:$PATH;
   cd $HOME;
-  apt-get update;
-  apt-get -y install ubuntu-standard git make;
+  apt-get -qq update;
+  apt-get -qq -y install ubuntu-standard git make;
   git clone https://github.com/steve-cs/gnat-builder.git;
   cd gnat-builder;
   make prerequisites-install;
