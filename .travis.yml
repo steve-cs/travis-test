@@ -21,5 +21,4 @@ script:
   make prerequisites-install;
   make release-download;
   make release-install;
-  make all;
   "
