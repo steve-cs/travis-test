@@ -11,5 +11,15 @@ services:
 script:
 - docker pull ubuntu:artful
 - docker run ubuntu:artful /bin/bash -c "
-  echo Hello World
+  echo Hello World;
+  export PATH=/usr/local/gnat/bin:$PATH;
+  cd $HOME;
+  apt-get update;
+  apt-get -y install ubuntu-standard git make;
+  git clone https://github.com/steve-cs/gnat-builder.git;
+  cd gnat-builder
+  make prerequisites-install;
+  make release-download;
+  make release-install;
+  make all;
   "
