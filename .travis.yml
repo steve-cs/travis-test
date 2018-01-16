@@ -8,8 +8,6 @@ os:
 services:
   - docker
 
-before_install:
+script:
 - docker pull ubuntu:artful
 - docker run ubuntu:artful /bin/bash -c "echo Hello World"
-
-script: true
