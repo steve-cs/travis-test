@@ -17,7 +17,7 @@ script:
   apt-get update;
   apt-get -y install ubuntu-standard git make;
   git clone https://github.com/steve-cs/gnat-builder.git;
-  cd gnat-builder
+  cd gnat-builder;
   make prerequisites-install;
   make release-download;
   make release-install;
