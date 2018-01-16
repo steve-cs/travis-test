@@ -10,4 +10,5 @@ services:
 
 script:
 - docker pull ubuntu:artful
-- docker run ubuntu:artful /bin/bash -c "echo Hello World"
+- docker run ubuntu:artful /bin/bash -c >
+    echo Hello World
