@@ -22,5 +22,5 @@ script:
   && make prerequisites-install
   && make release-download
   && make release-install
-  && make xmlada
+  && make grpbuild
   "
