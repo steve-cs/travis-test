@@ -9,8 +9,8 @@ services:
   - docker
 
 script:
-- docker pull ubuntu:artful
-- docker run ubuntu:artful /bin/bash -c "
+- docker pull ubuntu:bionic
+- docker run ubuntu:bionic /bin/bash -c "
   echo Hello World
   && export PATH=/usr/local/gnat/bin:$PATH
   && mkdir -p $HOME
