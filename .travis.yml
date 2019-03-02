@@ -17,7 +17,7 @@ script:
   && mkdir -p $HOME
   && cd $HOME
   && apt-get -qq update
-  && apt-get -qq -y install ubuntu-standard git make
+  && apt-get -qq -y install ubuntu-minimal ubuntu-standard git make
   && git clone https://github.com/steve-cs/gnat-builder.git
   && cd gnat-builder
   && make prerequisites-install
