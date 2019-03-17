@@ -21,5 +21,6 @@ script:
   && cd gnat-builder
   && make depends
   && make prefix=/usr/local release-install
+  && make gtkada-depends
   && make gtkada
   "
