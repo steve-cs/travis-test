@@ -19,7 +19,8 @@ script:
   && apt-get -qq -y install git make
   && git clone https://github.com/steve-cs/gnat-builder.git
   && cd gnat-builder
-  && make base-depends gps-depends
+  && make depends
   && make prefix=/usr/local release-install
+  && make gps-depends
   && make gps
   "
