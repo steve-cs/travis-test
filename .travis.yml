@@ -19,7 +19,7 @@ script:
   && apt-get -qq -y install git make
   && git clone https://github.com/steve-cs/gnat-builder.git
   && cd gnat-builder
-  && make depends
+  && make base-depends gnatcoll-db-depends
   && make prefix=/usr/local release-install
   && make gnatcoll-db
   "
