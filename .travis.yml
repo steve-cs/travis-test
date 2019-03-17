@@ -13,15 +13,13 @@ script:
 - docker run ubuntu:bionic /bin/bash -c "
   echo Hello World
   && export DEBIAN_FRONTEND=noninteractive
-  && export PATH=/usr/local/gnat/bin:$PATH
   && mkdir -p $HOME
   && cd $HOME
   && apt-get -qq update
-  && apt-get -qq -y install ubuntu-minimal ubuntu-standard git make
+  && apt-get -qq -y install git make
   && git clone https://github.com/steve-cs/gnat-builder.git
   && cd gnat-builder
-  && make prerequisites-install
-  && make release-download
-  && make release-install
+  && make depends
+  && make prefix=/usr/local release-install
   && make libadalang
   "
