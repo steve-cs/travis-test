@@ -15,11 +15,9 @@ script:
   && export DEBIAN_FRONTEND=noninteractive
   && mkdir -p $HOME
   && cd $HOME
-  && apt-get -qq update
   && apt-get -qq -y install git make
   && git clone https://github.com/steve-cs/gnat-builder.git
   && cd gnat-builder
-  && make depends
   && make prefix=/usr/local release-install
   && which gcc
   && gcc -v
