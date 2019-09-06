@@ -16,7 +16,7 @@ script:
   && mkdir -p $HOME
   && cd $HOME
   && apt-get update
-  && apt-get -qq -y install git make
+  && apt-get -qq -y install git make wget
   && git clone https://github.com/steve-cs/gnat-builder.git
   && cd gnat-builder
   && make prefix=/usr/local release-install
