@@ -19,8 +19,6 @@ script:
   && apt-get -qq -y install git make
   && git clone https://github.com/steve-cs/gnat-builder.git
   && cd gnat-builder
-  && make depends
   && make prefix=/usr/local release-install
-  && make spark2014-depends
   && make spark2014
   "
