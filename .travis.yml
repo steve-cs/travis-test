@@ -9,13 +9,13 @@ services:
   - docker
 
 script:
-- docker pull ubuntu:bionic
-- docker run ubuntu:bionic /bin/bash -c "
+- docker pull ubuntu:focal
+- docker run ubuntu:focal /bin/bash -c "
   echo Hello World
-  && export DEBIAN_FRONTEND=noninteractive
   && mkdir -p $HOME
   && cd $HOME
-  && apt-get -qq update
+  && apt-get update
+  && DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
   && apt-get -qq -y install git make
   && git clone https://github.com/steve-cs/gnat-builder.git
   && cd gnat-builder
