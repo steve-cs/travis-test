@@ -20,5 +20,5 @@ script:
   && git clone https://github.com/steve-cs/gnat-builder.git
   && cd gnat-builder
   && make prefix=/usr/local release-install
-  && make libadalang
+  && make langkit
   "
