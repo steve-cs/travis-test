@@ -1,6 +1,6 @@
 dist: focal
 sudo: required
-language: c
+language: minimal
 
 os:
   - linux
