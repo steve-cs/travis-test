@@ -15,5 +15,6 @@ script:
   && git clone https://github.com/steve-cs/gnat-builder.git
   && cd gnat-builder
   && make prefix=/usr/local release-install
+  && apt-get -qq -y install ocaml-libfind
   && make spark2014
   "
