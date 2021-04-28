@@ -10,8 +10,6 @@ script:
   echo Hello World
   && mkdir -p $HOME
   && cd $HOME
-  && apt-get update
-  && apt-get -qq -y upgrade
   && DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
   && apt-get -qq -y install git make
   && git clone https://github.com/steve-cs/gnat-builder.git
