@@ -1,17 +1,19 @@
 dist: focal
-sudo: required
 language: minimal
 
 os:
   - linux
 
+services:
+  - docker
+
 script:
-- sudo /bin/bash -c "
+- docker pull ubuntu:focal
+- docker run ubuntu:focal /bin/bash -c "
   echo Hello World
   && mkdir -p $HOME
   && cd $HOME
   && apt-get update
-  && apt-get -qq -y dist-upgrade
   && DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
   && apt-get -qq -y install git make
   && git clone https://github.com/steve-cs/gnat-builder.git
