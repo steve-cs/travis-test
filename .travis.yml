@@ -1,15 +1,12 @@
 dist: focal
+sudo: required
 language: minimal
 
 os:
   - linux
 
-services:
-  - docker
-
 script:
-- docker pull ubuntu:focal
-- docker run ubuntu:focal /bin/bash -c "
+- sudo /bin/bash -c "
   echo Hello World
   && mkdir -p $HOME
   && cd $HOME
